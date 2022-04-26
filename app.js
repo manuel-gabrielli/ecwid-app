@@ -1,9 +1,4 @@
-// Initialize extra fields
-ec = ec || {};
-      ec.order = ec.order || {};
-      ec.order.extraFields = ec.order.extraFields || {};
-
-Ecwid.OnPageLoaded.add(function (page) {
+/*Ecwid.OnPageLoaded.add(function (page) {
   if (page.type == 'CHECKOUT_PAYMENT_DETAILS') {
     if (
       document.querySelector(
@@ -11,24 +6,28 @@ Ecwid.OnPageLoaded.add(function (page) {
       ).checked == true
     ) {
       
-      // Set order surcharge
-      return ec.order.extraFields.surcharge = {
-        value: 'Custom charge',
-        options: [
-          {
-            title: 'Custom charge',
-            surcharge: 5,
-          },
-        ],
-        surchargeShortName: {
-          name: 'Surcharge',
-          showSurchargePercentValue: false,
-        },
-        surchargeType: 'PERCENT',
-      };
-      Ecwid.refreshConfig && Ecwid.refreshConfig();
     }
   }
 });
+*/
 
-
+// Initialize extra fields
+ec = ec || {};
+ec.order = ec.order || {};
+ec.order.extraFields = ec.order.extraFields || {};
+// Set order surcharge
+ec.order.extraFields.surcharge = {
+  value: 'Custom charge',
+  options: [
+    {
+      title: 'Custom charge',
+      surcharge: 5,
+    },
+  ],
+  surchargeShortName: {
+    name: 'Surcharge',
+    showSurchargePercentValue: false,
+  },
+  surchargeType: 'PERCENT',
+};
+Ecwid.refreshConfig && Ecwid.refreshConfig();
