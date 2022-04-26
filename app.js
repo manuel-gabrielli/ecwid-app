@@ -28,6 +28,6 @@ ec.order.extraFields.surcharge = {
     name: 'Surcharge',
     showSurchargePercentValue: false,
   },
-  surchargeType: 'PERCENT',
+  surchargeType: 'ABSOLUTE',
 };
 Ecwid.refreshConfig && Ecwid.refreshConfig();
