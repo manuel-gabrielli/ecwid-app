@@ -23,7 +23,7 @@ Ecwid.OnPageLoaded.add(function (page) {
 
     document
       .querySelector(
-        '.ec-radiogroup__item--Credit-or-debit-card input'
+        '.ec-radiogroup__item--Carta-di-credito-o-debito input'
       )
       .addEventListener('click', function () {
         ec.order.extraFields.surcharge = {
