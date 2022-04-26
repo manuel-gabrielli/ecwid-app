@@ -32,8 +32,10 @@ Ecwid.refreshConfig && Ecwid.refreshConfig();
       
     }
   ;
-*/
 
-document.querySelector('.dark-toggle').addEventListener('click', function () {
+  document.querySelector('.dark-toggle').addEventListener('click', function () {
 
 }
+*/
+
+
