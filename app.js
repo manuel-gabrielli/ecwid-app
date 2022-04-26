@@ -21,11 +21,11 @@ ec.order.extraFields.surcharge = {
   options: [
     {
       title: 'Custom charge',
-      surcharge: 5,
+      surcharge: 4,
     },
   ],
   surchargeShortName: {
-    name: 'Surcharge',
+    name: 'Sovrapprezzo Contrassegno',
     showSurchargePercentValue: false,
   },
   surchargeType: 'ABSOLUTE',
