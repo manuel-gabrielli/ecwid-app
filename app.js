@@ -12,23 +12,40 @@
 */
 
 
-// Initialize extra fields
 ec = ec || {};
 ec.order = ec.order || {};
 ec.order.extraFields = ec.order.extraFields || {};
-// Set order surcharge
-ec.order.extraFields.surcharge = {
-    'value': 'Custom charge',
-    "options": [
+
+ec.order.extraFields.tips = {
+    'title': 'Tips',
+    'type': 'toggleButtonGroup',
+    'options': [
     { 
-        "title": "Custom charge",
-        "surcharge": 5
+      'title': 'No tips',
     },
-    ],
-    "surchargeShortName": {
-        "name": "Surcharge",
-         "showSurchargePercentValue": false
+    {
+      'title': '5%',
+      'subtitle': 'Tip 5% from your order total',  
+      'surcharge': 5
     },
-    'surchargeType': 'PERCENT'
-}
-Ecwid.refreshConfig && Ecwid.refreshConfig();
+    {
+      'title': '10%',
+      'subtitle': 'Tip 10% from your order total',
+      'surcharge': 10
+    }
+  ],
+  'surchargeType': 'PERCENT',
+  'surchargeShortName': {
+    'name': 'Tips',
+    'showSurchargePercentValue': true,
+    'nameTranslated': {
+      'en': 'Tips',
+      'ru': 'Чаевые'
+    }
+  },
+  'showZeroSurchargeInTotal' : false,
+  'required': true,
+  'checkoutDisplaySection': 'payment_details'
+};
+
+Ecwid.refreshConfig && Ecwid.refreshConfig()
