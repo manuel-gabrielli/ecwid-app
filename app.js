@@ -1,3 +1,5 @@
-Ecwid.OnPageLoaded.add(function(page){
-  console.log("Current page is of type: " + page.type);
+Ecwid.OnPageLoaded.add(function(page) {
+  if (page.type == "CHECKOUT_PAYMENT_DETAILS") {
+    console.log("Hello World!");
+}
 });
