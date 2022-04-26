@@ -58,7 +58,7 @@ Ecwid.OnPageLoaded.add(function (page) {
             },
           ],
           surchargeShortName: {
-            name: 'Surcharge',
+            name: 'Sovrapprezzo Contrassegno',
             showSurchargePercentValue: false,
           },
           surchargeType: 'ABSOLUTE',
@@ -76,10 +76,10 @@ Ecwid.OnPageLoaded.add(function (page) {
         },
       ],
       surchargeShortName: {
-        name: 'Surcharge',
+        name: 'Sovrapprezzo Contrassegno',
         showSurchargePercentValue: false,
       },
-      surchargeType: 'PERCENT',
+      surchargeType: 'ABSOLUTE',
       showZeroSurchargeInTotal: false,
     }; // hides 0 surcharge from the order total table
   }
